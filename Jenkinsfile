@@ -12,11 +12,19 @@ pipeline {
     stage('Build') {
       steps {
         // script
-         echo 'Checkout'
-        sh 'mvn clean install'
+         sh 'mvn clean package'
       }
     }
 
+    stage('Test') {
+      steps {
+        // script
+         echo 'Test'
+         sh 'mvn test'
+        
+  
+      }
+    }
   }
 
 }
