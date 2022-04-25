@@ -12,7 +12,7 @@ pipeline {
     stage('Build') {
       steps {
         // script
-         sh 'mvn clean package'
+        echo 'Checkout'
       }
     }
 
@@ -20,7 +20,7 @@ pipeline {
       steps {
         // script
          echo 'Test'
-         sh 'mvn test'
+        
         
   
       }
